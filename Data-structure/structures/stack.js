@@ -1,44 +1,42 @@
 class myStack {
-  constructor(storage, count) {
+  constructor() {
     this.storage = {},
       this.count = 0
   }
 
-
+  // this method push new value to the stack
   push(value) {
-    this.storage[this.count] = value; // add value to stack storage
-    this.count++; // increment storage count
+    this.storage[this.count] = value;
+    this.count++;
   }
-
-
+  
+  
+  // this method popped out a value from the stack
   pop() {
-    // return undefined is there's no value in the storage
     if (this.count === 0) return undefined;
+    this.count--;
 
-    this.count--; // decrement count
-
-    // set the last value in the stack as result value
+    
     const result = this.storage[this.count];
-
-    // delete popped value from the storage
     delete this.storage[this.count];
-
     return result; // return popped value
   }
-
+  
+  
+  // this method take peek at the last value of the stack
   peek() {
-    // return last value in the storage without deleting it
-    return this.storage[this.count - 1];
+   return this.storage[this.count - 1];
   }
-
+  
+  // this method return the size of the stack 
   size() {
-    // return count number
-    return this.count;
+     return this.count;
   }
 }
 
 
 
+/*** test logs ***/
 // const demo = new myStack();
 // demo.push('string value');
 // demo.push(1);
