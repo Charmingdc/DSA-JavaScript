@@ -5,26 +5,32 @@ class Queue {
     this.collection = []
   }
   
+  // this method will print the collection 
   print() {
     console.log(this.collection);
   }
   
+  // this method will add a new value to the collection 
   enqueue(value) {
     this.collection.push(value);
   }
   
+  // this method will remove the first value from the collection
   dequeue() {
     return this.collection.shift();
   }
   
+  // this method will return the first value in the collection
   front() {
     return this.collection[0];
   }
   
+  // this method will return the size of the collection 
   size() {
     return this.collection.length;
   }
   
+  // this method will check if the collection is empty
   isEmpty() {
     return (this.collection.length === 0)
   }
@@ -52,11 +58,12 @@ class PriorityQueue {
     this.collection = []
   }
   
+  // this method will print the collection
   print() {
     console.log(this.collection);
   }
 
-  
+  // this method will insert a new value in the collection based on value priority
   enqueue(value) {
     if (this.isEmpty()) {
       this.collection.push(value);
@@ -76,23 +83,23 @@ class PriorityQueue {
       }
     }
   }
-  
-  
+
+  // this method will remove the first value from the collection
   dequeue() {
     return this.collection.shift();
   }
   
-  
+  // this method will return the first value in the collectio
   front() {
     return this.collection[0];
   }
   
-  
+  // this method will return the size of the collection 
   size() {
     return this.collection.length;
   }
   
-  
+  // this method will check if the collection is empty
   isEmpty() {
     return (this.collection.length === 0);
   }
